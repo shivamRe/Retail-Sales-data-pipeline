@@ -1,0 +1,68 @@
+{
+  "name": "RetailSalesPipelineParameterized",
+  "properties": {
+    "parameters": {
+      "processDate": {
+        "type": "String",
+        "defaultValue": "2025-01-01"
+      }
+    },
+    "activities": [
+      {
+        "name": "IngestBronze",
+        "type": "DatabricksNotebook",
+        "typeProperties": {
+          "notebookPath": "01_ingest_bronze_streaming",
+          "baseParameters": {
+            "raw_path": "@pipeline().parameters.processDate"
+          }
+        }
+      },
+      {
+        "name": "TransformSilver",
+        "type": "DatabricksNotebook",
+        "dependsOn": [
+          {
+            "activity": "IngestBronze",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "notebookPath": "02_transform_silver_databricks"
+        }
+      },
+      {
+        "name": "CurateGold",
+        "type": "DatabricksNotebook",
+        "dependsOn": [
+          {
+            "activity": "TransformSilver",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "notebookPath": "03_curate_gold_databricks"
+        }
+      },
+      {
+        "name": "CreateManifest",
+        "type": "DatabricksNotebook",
+        "dependsOn": [
+          {
+            "activity": "CurateGold",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "notebookPath": "04_manifest"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "RetailSalesPipeline",
+  "properties": {
+    "activities": [
+      {
+        "name": "IngestBronze",
+        "type": "DatabricksNotebook",
+        "dependsOn": []
+      },
+      {
+        "name": "TransformSilver",
+        "type": "DatabricksNotebook",
+        "dependsOn": [
+          "IngestBronze"
+        ]
+      },
+      {
+        "name": "CurateGold",
+        "type": "DatabricksNotebook",
+        "dependsOn": [
+          "TransformSilver"
+        ]
+      },
+      {
+        "name": "Manifest",
+        "type": "DatabricksNotebook",
+        "dependsOn": [
+          "CurateGold"
+        ]
+      }
+    ]
+  }
+}
