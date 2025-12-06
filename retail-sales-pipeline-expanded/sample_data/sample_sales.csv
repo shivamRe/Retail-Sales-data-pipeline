@@ -443,7 +443,6 @@ t3,p1,3,9.5,2025-01-02,north,c3
 t1,p1,2,10.0,2025-01-01,north,c1
 t2,p2,1,5.0,2025-01-02,south,c2
 t3,p1,3,9.5,2025-01-02,north,c3
-transaction_id,product_id,quantity,unit_price,sales_date,region,customer_id
 t1,p1,2,10.0,2025-01-01,north,c1
 t2,p2,1,5.0,2025-01-02,south,c2
 t3,p1,3,9.5,2025-01-02,north,c3
@@ -888,7 +887,6 @@ t3,p1,3,9.5,2025-01-02,north,c3
 t1,p1,2,10.0,2025-01-01,north,c1
 t2,p2,1,5.0,2025-01-02,south,c2
 t3,p1,3,9.5,2025-01-02,north,c3
-transaction_id,product_id,quantity,unit_price,sales_date,region,customer_id
 t1,p1,2,10.0,2025-01-01,north,c1
 t2,p2,1,5.0,2025-01-02,south,c2
 t3,p1,3,9.5,2025-01-02,north,c3
@@ -1333,7 +1331,6 @@ t3,p1,3,9.5,2025-01-02,north,c3
 t1,p1,2,10.0,2025-01-01,north,c1
 t2,p2,1,5.0,2025-01-02,south,c2
 t3,p1,3,9.5,2025-01-02,north,c3
-transaction_id,product_id,quantity,unit_price,sales_date,region,customer_id
 t1,p1,2,10.0,2025-01-01,north,c1
 t2,p2,1,5.0,2025-01-02,south,c2
 t3,p1,3,9.5,2025-01-02,north,c3
@@ -1778,7 +1775,6 @@ t3,p1,3,9.5,2025-01-02,north,c3
 t1,p1,2,10.0,2025-01-01,north,c1
 t2,p2,1,5.0,2025-01-02,south,c2
 t3,p1,3,9.5,2025-01-02,north,c3
-transaction_id,product_id,quantity,unit_price,sales_date,region,customer_id
 t1,p1,2,10.0,2025-01-01,north,c1
 t2,p2,1,5.0,2025-01-02,south,c2
 t3,p1,3,9.5,2025-01-02,north,c3
@@ -2223,7 +2219,6 @@ t3,p1,3,9.5,2025-01-02,north,c3
 t1,p1,2,10.0,2025-01-01,north,c1
 t2,p2,1,5.0,2025-01-02,south,c2
 t3,p1,3,9.5,2025-01-02,north,c3
-transaction_id,product_id,quantity,unit_price,sales_date,region,customer_id
 t1,p1,2,10.0,2025-01-01,north,c1
 t2,p2,1,5.0,2025-01-02,south,c2
 t3,p1,3,9.5,2025-01-02,north,c3
